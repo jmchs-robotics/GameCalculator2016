@@ -107,45 +107,41 @@ $(".input-number").keydown(function (e) {
 function recalculateSums() {
 	var autoTotal = 0;
 
-	var reachAuto = $('[name="reachAuto"]').val()*2;
+	var reachAuto = $('[name="reachAuto"]').val()*5;
 	$("#reachAuto .taskTotal").text(reachAuto);
 	autoTotal+=reachAuto;
 
-	var crossAuto = $('[name="crossAuto"]').val()*10;
-	$("#crossAuto .taskTotal").text(crossAuto);
-	autoTotal+=crossAuto;
+    var boilerLowAuto = $('[name="boilerLowAuto"]').val()*1/3;
+    $("#boilerLowAuto .taskTotal").text(boilerLowAuto);
+    autoTotal+=boilerLowAuto;
 
-	var lowGoalAuto = $('[name="lowGoalAuto"]').val()*5;
-	$("#lowGoalAuto .taskTotal").text(lowGoalAuto);
-	autoTotal+=lowGoalAuto;
+    var boilerHighAuto = $('[name="boilerHighAuto"]').val()*1;
+    $("#boilerHighAuto .taskTotal").text(boilerHighAuto);
+    autoTotal+=boilerHighAuto;
 
-	var highGoalAuto = $('[name="highGoalAuto"]').val()*10;
-	$("#highGoalAuto .taskTotal").text(highGoalAuto);
-	autoTotal+=highGoalAuto;
+    var rotorAuto = $('[name="rotorAuto"]').val()*60;
+    $("#rotorAuto .taskTotal").text(rotorAuto);
+    autoTotal+=rotorAuto;
 
 	$("#autoSum").text(autoTotal);
 
 	var teleopTotal = 0;
 
-	var challengedTeleop = $('[name="challengedTeleop"]').val()*5;
-	$("#challengedTeleop .taskTotal").text(challengedTeleop);
-	teleopTotal+=challengedTeleop;
+    var boilerLowTeleop = $('[name="boilerLowTeleop"]').val()*1/9;
+    $("#boilerLowTeleop .taskTotal").text(boilerLowTeleop);
+    teleopTotal+=boilerLowTeleop;
 
-	var scaledTeleop = $('[name="scaledTeleop"]').val()*15;
-	$("#scaledTeleop .taskTotal").text(scaledTeleop);
-	teleopTotal+=scaledTeleop;
+    var boilerHighTeleop = $('[name="boilerHighTeleop"]').val()*1/3;
+    $("#boilerHighTeleop .taskTotal").text(boilerHighTeleop);
+    teleopTotal+=boilerHighTeleop;
 
-	var crossTeleop = $('[name="crossTeleop"]').val()*5;
-	$("#crossTeleop .taskTotal").text(crossTeleop);
-	teleopTotal+=crossTeleop;
+    var rotorTeleop = $('[name="rotorTeleop"]').val()*40;
+    $("#rotorTeleop .taskTotal").text(rotorTeleop);
+    teleopTotal+=rotorTeleop;
 
-	var lowGoalTeleop = $('[name="lowGoalTeleop"]').val()*2;
-	$("#lowGoalTeleop .taskTotal").text(lowGoalTeleop);
-	teleopTotal+=lowGoalTeleop;
-
-	var highGoalTeleop = $('[name="highGoalTeleop"]').val()*5;
-	$("#highGoalTeleop .taskTotal").text(highGoalTeleop);
-	teleopTotal+=highGoalTeleop;
+    var takeoffReady = $('[name="takeoffReady"]').val()*50;
+    $("#takeoffReady .taskTotal").text(takeoffReady);
+    teleopTotal+=takeoffReady;
 
 	$("#teleopSum").text(teleopTotal);
 

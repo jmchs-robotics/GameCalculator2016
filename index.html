@@ -9,7 +9,7 @@
 
 <body>
 	<div class="container">
-		<h1>FRC Stronghold Game Calculator</h1>
+		<h1>FRC Steamworks Game Calculator</h1>
 
 		<hr>
 
@@ -33,7 +33,9 @@
 					</div>
 				</div>
 				<div class="col-xs-5 taskLabel">
-					Reached a defense
+					<b>Mobility</b>
+					<br/>
+					<span>For each ROBOT that breaks the BASE LINE vertical plane with their BUMPER by T=0</span>
 				</div>
 				<div class="col-xs-2 taskTotal">
 					0
@@ -41,25 +43,27 @@
 			</div>
 		</div>
 
-		<div class="panel panel-default" id="crossAuto">
+		<div class="panel panel-default" id="boilerLowAuto">
 			<div class="panel-body row">
 				<div class="col-xs-5">
 					<div class="input-group">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="crossAuto">
+							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="boilerLowAuto">
 								<span class="glyphicon glyphicon-minus"></span>
 							</button>
 						</span>
-						<input type="text" name="crossAuto" class="form-control input-number" value="0" min="0" max="10">
+						<input type="text" name="boilerLowAuto" class="form-control input-number" value="0" min="0" max="9999">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="crossAuto">
+							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="boilerLowAuto">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</span>
 					</div>
 				</div>
 				<div class="col-xs-5 taskLabel">
-					Crossed a defense
+					<b>Pressure accumulation</b>
+					<br/>
+					<span>For every three (3) FUEL counted in the Low Efficiency GOAL by T=0</span>
 				</div>
 				<div class="col-xs-2 taskTotal">
 					0
@@ -67,26 +71,27 @@
 			</div>
 		</div>
 
-
-		<div class="panel panel-default" id="lowGoalAuto">
+		<div class="panel panel-default" id="boilerHighAuto">
 			<div class="panel-body row">
 				<div class="col-xs-5">
 					<div class="input-group">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="lowGoalAuto">
+							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="boilerHighAuto">
 								<span class="glyphicon glyphicon-minus"></span>
 							</button>
 						</span>
-						<input type="text" name="lowGoalAuto" class="form-control input-number" value="0" min="0" max="10">
+						<input type="text" name="boilerHighAuto" class="form-control input-number" value="0" min="0" max="9999">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="lowGoalAuto">
+							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="boilerHighAuto">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</span>
 					</div>
 				</div>
 				<div class="col-xs-5 taskLabel">
-					Boulder in a low tower goal
+					<b>Pressure accumulation</b>
+					<br/>
+					<span>For every one (1) FUEL counted in the High Efficiency GOAL by T=0</span>
 				</div>
 				<div class="col-xs-2 taskTotal">
 					0
@@ -94,25 +99,27 @@
 			</div>
 		</div>
 
-		<div class="panel panel-default" id="highGoalAuto">
+		<div class="panel panel-default" id="rotorAuto">
 			<div class="panel-body row">
 				<div class="col-xs-5">
 					<div class="input-group">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="highGoalAuto">
+							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="rotorAuto">
 								<span class="glyphicon glyphicon-minus"></span>
 							</button>
 						</span>
-						<input type="text" name="highGoalAuto" class="form-control input-number" value="0" min="0" max="999">
+						<input type="text" name="rotorAuto" class="form-control input-number" value="0" min="0" max="4">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="highGoalAuto">
+							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="rotorAuto">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</span>
 					</div>
 				</div>
 				<div class="col-xs-5 taskLabel">
-					Boulder in a high tower goal
+					<b>ROTOR engagement</b>
+					<br/>
+					<span>For each ROTOR turning by period’s T=0</span>
 				</div>
 				<div class="col-xs-2 taskTotal">
 					0
@@ -135,25 +142,27 @@
 
 		<h2>Teleop</h2>
 
-		<div class="panel panel-default" id="crossTeleop">
+		<div class="panel panel-default" id="boilerLowTeleop">
 			<div class="panel-body row">
 				<div class="col-xs-5">
 					<div class="input-group">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="crossTeleop">
+							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="boilerLowTeleop">
 								<span class="glyphicon glyphicon-minus"></span>
 							</button>
 						</span>
-						<input type="text" name="crossTeleop" class="form-control input-number" value="0" min="0" max="999">
+						<input type="text" name="boilerLowTeleop" class="form-control input-number" value="0" min="0" max="9999">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="crossTeleop">
+							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="boilerLowTeleop">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</span>
 					</div>
 				</div>
 				<div class="col-xs-5 taskLabel">
-					Crossed a defense
+					<b>Pressure accumulation</b>
+					<br/>
+					<span>For every nine (9) FUEL counted in the Low Efficiency GOAL by T=0</span>
 				</div>
 				<div class="col-xs-2 taskTotal">
 					0
@@ -161,25 +170,27 @@
 			</div>
 		</div>
 
-		<div class="panel panel-default" id="lowGoalTeleop">
+		<div class="panel panel-default" id="boilerHighTeleop">
 			<div class="panel-body row">
 				<div class="col-xs-5">
 					<div class="input-group">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="lowGoalTeleop">
+							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="boilerHighTeleop">
 								<span class="glyphicon glyphicon-minus"></span>
 							</button>
 						</span>
-						<input type="text" name="lowGoalTeleop" class="form-control input-number" value="0" min="0" max="999">
+						<input type="text" name="boilerHighTeleop" class="form-control input-number" value="0" min="0" max="9999">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="lowGoalTeleop">
+							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="boilerHighTeleop">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</span>
 					</div>
 				</div>
 				<div class="col-xs-5 taskLabel">
-					Boulder in a low tower goal
+					<b>Pressure accumulation</b>
+					<br/>
+					<span>For every three (3) FUEL counted in the High Efficiency GOAL by T=0</span>
 				</div>
 				<div class="col-xs-2 taskTotal">
 					0
@@ -187,26 +198,27 @@
 			</div>
 		</div>
 
-
-		<div class="panel panel-default" id="highGoalTeleop">
+		<div class="panel panel-default" id="rotorTeleop">
 			<div class="panel-body row">
 				<div class="col-xs-5">
 					<div class="input-group">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="highGoalTeleop">
+							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="rotorTeleop">
 								<span class="glyphicon glyphicon-minus"></span>
 							</button>
 						</span>
-						<input type="text" name="highGoalTeleop" class="form-control input-number" value="0" min="0" max="999">
+						<input type="text" name="rotorTeleop" class="form-control input-number" value="0" min="0" max="4">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="highGoalTeleop">
+							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="rotorTeleop">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</span>
 					</div>
 				</div>
 				<div class="col-xs-5 taskLabel">
-					Boulder in a high tower goal
+					<b>ROTOR engagement</b>
+					<br/>
+					<span>For each ROTOR turning by period’s T=0</span>
 				</div>
 				<div class="col-xs-2 taskTotal">
 					0
@@ -214,51 +226,27 @@
 			</div>
 		</div>
 
-		<div class="panel panel-default" id="challengedTeleop">
+		<div class="panel panel-default" id="takeoffReady">
 			<div class="panel-body row">
 				<div class="col-xs-5">
 					<div class="input-group">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="challengedTeleop">
+							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="takeoffReady">
 								<span class="glyphicon glyphicon-minus"></span>
 							</button>
 						</span>
-						<input type="text" name="challengedTeleop" class="form-control input-number" value="0" min="0" max="3">
+						<input type="text" name="takeoffReady" class="form-control input-number" value="0" min="0" max="3">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="challengedTeleop">
+							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="takeoffReady">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</span>
 					</div>
 				</div>
 				<div class="col-xs-5 taskLabel">
-					Challenged the tower
-				</div>
-				<div class="col-xs-2 taskTotal">
-					0
-				</div>
-			</div>
-		</div>
-
-		<div class="panel panel-default" id="scaledTeleop">
-			<div class="panel-body row">
-				<div class="col-xs-5">
-					<div class="input-group">
-						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="scaledTeleop">
-								<span class="glyphicon glyphicon-minus"></span>
-							</button>
-						</span>
-						<input type="text" name="scaledTeleop" class="form-control input-number" value="0" min="0" max="3">
-						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="scaledTeleop">
-								<span class="glyphicon glyphicon-plus"></span>
-							</button>
-						</span>
-					</div>
-				</div>
-				<div class="col-xs-5 taskLabel">
-					Scaled the tower
+					<b>Ready for Takeoff</b>
+					<br/>
+					<span>For each TOUCHPAD triggered by a ROBOT at T=0</span>
 				</div>
 				<div class="col-xs-2 taskTotal">
 					0
