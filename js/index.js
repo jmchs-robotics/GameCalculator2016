@@ -111,28 +111,28 @@ function recalculateSums() {
 	$("#reachAuto .taskTotal").text(reachAuto);
 	autoTotal+=reachAuto;
 
-    var boilerLowAuto = Math.floor($('[name="boilerLowAuto"]').val()*1/3);
-    $("#boilerLowAuto .taskTotal").text(boilerLowAuto);
+    var boilerLowAuto = $('[name="boilerLowAuto"]').val()*1/3;
+    $("#boilerLowAuto .taskTotal").text(Math.floor(boilerLowAuto));
     autoTotal+=boilerLowAuto;
 
-    var boilerHighAuto = Math.floor($('[name="boilerHighAuto"]').val()*1);
-    $("#boilerHighAuto .taskTotal").text(boilerHighAuto);
+    var boilerHighAuto = $('[name="boilerHighAuto"]').val()*1;
+    $("#boilerHighAuto .taskTotal").text(Math.floor(boilerHighAuto));
     autoTotal+=boilerHighAuto;
 
     var rotorAuto = $('[name="rotorAuto"]').val()*60;
     $("#rotorAuto .taskTotal").text(rotorAuto);
     autoTotal+=rotorAuto;
 
-	$("#autoSum").text(autoTotal);
+	$("#autoSum").text(Math.floor(autoTotal));
 
 	var teleopTotal = 0;
 
-    var boilerLowTeleop = Math.floor($('[name="boilerLowTeleop"]').val()*1/9);
-    $("#boilerLowTeleop .taskTotal").text(boilerLowTeleop);
+    var boilerLowTeleop = $('[name="boilerLowTeleop"]').val()*1/9;
+    $("#boilerLowTeleop .taskTotal").text(Math.floor(boilerLowTeleop));
     teleopTotal+=boilerLowTeleop;
 
-    var boilerHighTeleop = Math.floor($('[name="boilerHighTeleop"]').val()*1/3);
-    $("#boilerHighTeleop .taskTotal").text(boilerHighTeleop);
+    var boilerHighTeleop = $('[name="boilerHighTeleop"]').val()*1/3;
+    $("#boilerHighTeleop .taskTotal").text(Math.floor(boilerHighTeleop));
     teleopTotal+=boilerHighTeleop;
 
     var rotorTeleop = $('[name="rotorTeleop"]').val()*40;
@@ -143,9 +143,9 @@ function recalculateSums() {
     $("#takeoffReady .taskTotal").text(takeoffReady);
     teleopTotal+=takeoffReady;
 
-	$("#teleopSum").text(teleopTotal);
+	$("#teleopSum").text(Math.floor(teleopTotal));
 
-	$("#totalSum").text(autoTotal+teleopTotal);
+	$("#totalSum").text(Math.floor(autoTotal+teleopTotal));
 }
 
 $(document).ready(function() {
